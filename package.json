@@ -8,6 +8,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production",
     "build:dev": "NODE_ENV=development webpack --mode development",
+    "start": "webpack-dev-server --config webpack-dev-server.config.js",
     "clean": "rimraf dist",
     "test": "jest",
     "lint": "eslint ."
@@ -26,10 +27,13 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.16.4",
+    "react-dom": "^16.8.4",
     "regenerator-runtime": "^0.13.1",
     "rimraf": "^2.6.3",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
   }
 }
