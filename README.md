@@ -59,3 +59,5 @@ npm run cm
 # Contributors
 
 Joel Thoms (jthoms@paciolan.com)
+
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](www.flaticon.com)
