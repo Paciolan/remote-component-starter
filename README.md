@@ -38,6 +38,24 @@ Start Webpack Dev Server
 npm run start
 ```
 
+# Commiting
+
+You should have commitizen installed globally.
+
+```bash
+npm install -g git-cz
+```
+
+Commits can be added using the cli.
+
+```bash
+# stage all changes
+git add .
+
+# run commitizen
+npm run cm
+```
+
 # Contributors
 
 Joel Thoms (jthoms@paciolan.com)
