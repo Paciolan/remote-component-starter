@@ -6,7 +6,7 @@ Remote Components give you the power to dynamically load React Components at run
 
 ```bash
 # clone the remote component starter kit
-git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starterkit.git my-component
+git clone git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starterkit.git my-component
 cd my-component
 
 # remove origin
