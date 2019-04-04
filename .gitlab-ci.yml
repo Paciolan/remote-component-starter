@@ -1,8 +1,4 @@
-image: paciolanhub/alpine-node-dev:10.4.1
-
-variables:
-  LIB: my-component
-  REPO_URL: gitlabdev.paciolan.info
+image: paciolanhub/alpine-node-dev:10.15.3c
 
 stages:
   - build
@@ -14,11 +10,6 @@ Build & Test:
   except:
     - tags
   before_script:
-    # npm user authentication
-    - printf %"s\n" //registry.npmjs.org/:_authToken=$NPM_TOKEN email=$NPM_EMAIL > ~/.npmrc
-
-    # npm install
-    - npm install npm -g
     - npm ci
   script:
     - npm run build
@@ -28,5 +19,4 @@ Build & Test:
     expire_in: 1 hour
     paths:
       - dist/
-      - node_modules/
   coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/

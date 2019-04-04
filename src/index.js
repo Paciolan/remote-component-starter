@@ -1,3 +1,6 @@
+/**
+ * Entrypoint of the Remote Component.
+ */
 import React from "react";
 import propTypes from "prop-types";
 
