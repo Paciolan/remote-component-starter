@@ -7,10 +7,12 @@ Remote Components give you the power to lazy load React Components from a URL.
 Clone the repository and initialize your project
 
 ```bash
-# pull the remote component starter kit
+# create new repo
 mkdir my-component
 cd my-component
 git init
+
+# pull the remote component starter kit
 git pull git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starter.git --depth=1
 git commit --amend -m "chore: 🛠️ pull remote-component-starter"
 

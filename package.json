@@ -11,8 +11,7 @@
     "url": "git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starter.git"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production",
-    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build": "npm run clean && NODE_ENV=production babel src --out-dir dist --ignore 'src/__tests__/*' --ignore 'src/dev.js' --source-maps",
     "start": "webpack-dev-server --config webpack-dev-server.config.js",
     "clean": "rimraf dist",
     "cz": "git-cz",
@@ -22,12 +21,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "core-js": "^3.0.0",
     "react": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-regenerator": "^7.4.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@commitlint/cli": "^7.5.2",

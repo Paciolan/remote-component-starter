@@ -1,12 +1,10 @@
 {
   "presets": [
     [
-      "@babel/env",
+      "@babel/preset-env",
       {
-        "useBuiltIns": "entry",
-        "corejs": 3,
         "targets": {
-          "browsers": "last 2 versions,> 1%,ie >= 11"
+          "node": "10"
         }
       }
     ],
@@ -15,7 +13,11 @@
   "env": {
     "production": {
       "plugins": [
-        ["transform-react-remove-prop-types", { "removeImport": true }]
+        ["transform-react-remove-prop-types", { "removeImport": true }],
+        [
+          "@babel/plugin-transform-modules-commonjs",
+          { "noInterop": true, "loose": true }
+        ]
       ]
     }
   }
