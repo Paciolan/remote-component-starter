@@ -1,6 +1,6 @@
 {
   "name": "@paciolan/remote-component-starter",
-  "version": "1.0.0-semantec-versioning",
+  "version": "1.0.0-semantic-versioning",
   "description": "Remote Component Starter",
   "private": true,
   "main": "dist/main.js",
