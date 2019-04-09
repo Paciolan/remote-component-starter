@@ -1,5 +1,5 @@
 /**
- * Application entry point for debugging and running webpack-dev-server.
+ * webpack-dev-server entry point for debugging.
  * This file is not bundled with the library during the build process.
  */
 import React from "react";

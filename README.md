@@ -1,6 +1,6 @@
 # Remote Component Starter Kit
 
-Remote Components give you the power to lazy load React Components from a URL.
+Starter Kit for quickly creating a Remote React Component that can be Lazily Loaded by `@paciolan/remote-component`.
 
 ## Getting Started
 
@@ -27,10 +27,6 @@ Modify `package.json` and replace the starter kit values with your own.
 - set `repository` to point to your repository.
 - set `license` to reflect the license of your project.
 
-## Algorithms
-
-Remote Components are designed to be dynamically loaded and injected into an app during run time.
-
 ## Files
 
 There are a few important files, one set is used for the bundle, another set for local development.
@@ -45,6 +41,12 @@ The bundle will be output to the `dist/main.js`.
 
 ```bash
 npm run build
+```
+
+Create a development build for easier debugging.
+
+```bash
+npm run build:dev
 ```
 
 ## Debugging
