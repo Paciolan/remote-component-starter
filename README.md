@@ -1,5 +1,7 @@
 # Remote Component Starter Kit
 
+![Starter Kit](https://raw.githubusercontent.com/Paciolan/remote-component-starter/master/media/icon-small.png)
+
 Starter Kit for quickly creating a Remote React Component that can be Lazily Loaded by `@paciolan/remote-component`.
 
 ## Getting Started
@@ -13,7 +15,7 @@ cd my-component
 git init
 
 # pull the remote component starter kit
-git pull git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starter.git --depth=1
+git pull https://github.com/Paciolan/remote-component-starter.git --depth=1
 git commit --amend -m "chore: 🛠️ pull remote-component-starter"
 
 # install dependencies
