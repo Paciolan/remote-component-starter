@@ -11,9 +11,9 @@
     "url": "git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starter.git"
   },
   "scripts": {
-    "build": "npm run clean && NODE_ENV=production webpack --mode production",
-    "build:dev": "npm run clean && NODE_ENV=development webpack --mode development",
-    "start": "webpack-dev-server --config webpack-dev-server.config.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production",
+    "build:dev": "npm run clean && cross-env NODE_ENV=development webpack --mode development",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack-dev-server.config.js",
     "clean": "rimraf dist",
     "cz": "git-cz",
     "test": "jest",
@@ -33,6 +33,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "cross-env": "^5.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "^5.16.0",
