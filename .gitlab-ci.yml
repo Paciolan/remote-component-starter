@@ -5,8 +5,6 @@ stages:
 
 Build & Test:
   stage: build
-  tags:
-    - gitlabdev
   except:
     - tags
   before_script:
