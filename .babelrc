@@ -3,18 +3,15 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": "last 2 versions,> 1%,ie >= 11"
-        }
+        "useBuiltIns": "usage",
+        "debug": false
       }
     ],
     "@babel/preset-react"
   ],
-  "env": {
-    "production": {
-      "plugins": [
-        ["transform-react-remove-prop-types", { "removeImport": true }]
-      ]
-    }
-  }
+  "plugins": [
+    ["@babel/plugin-transform-runtime", { "regenerator": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["transform-react-remove-prop-types", { "removeImport": true }]
+  ]
 }
