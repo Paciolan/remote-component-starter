@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverageFrom: ["./src/**/*.js"],
-  modulePathIgnorePatterns: ["<rootDir>/src/dev.js"],
+  modulePathIgnorePatterns: ["<rootDir>/src/webpack-dev-server.js"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   coverageThreshold: {
     global: {
