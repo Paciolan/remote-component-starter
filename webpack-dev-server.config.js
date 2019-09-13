@@ -1,5 +1,6 @@
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
+const webpack = require("webpack");
 const config = require("./webpack.config");
 
 const htmlPlugin = new HtmlWebpackPlugin({
@@ -8,15 +9,27 @@ const htmlPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: "./src/dev.js",
+  entry: "./src/webpack-dev-server.js",
   plugins: [
-    ...config.plugins,
+    ...config[0].plugins,
     htmlPlugin,
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
-  module: config.module,
+  module: config[0].module,
   devServer: {
-    hot: true
+    hot: true,
+    contentBase: __dirname,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization"
+    }
+  },
+  resolve: {
+    alias: {
+      "remote-component.config.js": path.resolve("./remote-component.config.js")
+    }
   }
 };
