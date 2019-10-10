@@ -5,4 +5,6 @@
  * @returns {*} value
  */
 export const get = ([prop, ...rest], object) =>
-  prop == null ? object : object == null ? undefined : get(rest, object[prop]);
+  prop == null ? object
+  : object == null ? undefined
+  : get(rest, object[prop]); // prettier-ignore
