@@ -4,7 +4,8 @@
 
 module.exports = {
   resolve: {
+    "prop-types": require("prop-types"),
     react: require("react"),
-    "prop-types": require("prop-types")
+    "styled-components": require("styled-components")
   }
 };

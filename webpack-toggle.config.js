@@ -27,8 +27,8 @@ module.exports = {
     libraryTarget: "commonjs"
   },
   externals: {
-    react: "react",
     "prop-types": "prop-types",
+    react: "react",
     "styled-components": "styled-components"
   },
   module: {
