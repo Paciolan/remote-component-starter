@@ -1,6 +1,6 @@
 /**
  * generates:
- *  - dist/toggle.js
+ *  - dist/main.js
  *  - dist/manifest.json
  *  - dist/webpack-bundle-analyzer-report.html
  */
