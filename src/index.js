@@ -4,9 +4,9 @@
 import React from "react";
 import propTypes from "prop-types";
 import styled from "styled-components";
-import { get } from "./lib/get";
+import { prop } from "./lib/prop";
 
-const Title = styled.h1(props => get(["theme", "typography", "title"], props));
+const Title = styled.h1(props => prop(["theme", "typography", "title"], props));
 
 const RemoteComponent = ({ name }) => {
   return <Title>Hello {name}!</Title>;
