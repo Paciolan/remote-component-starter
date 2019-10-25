@@ -53,11 +53,15 @@ npm run build:dev
 
 ## Debugging
 
-The component can be debugged locally by starting `webpack-dev-server`. This will start and launch the entrypoint `src/dev.js`.
+The component can be debugged locally by first starting `webpack-dev-server`.
 
 ```bash
 npm run start
 ```
+
+Now (using VSCODE), go to the Debug tab, select "Launch Chrome" and start the debugger (F5).
+
+You should now be able to set breakpoints and step through the code.
 
 ## Changing the Output
 
