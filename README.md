@@ -59,6 +59,30 @@ The component can be debugged locally by starting `webpack-dev-server`. This wil
 npm run start
 ```
 
+## Changing the Output
+
+The bundle as a default will be output to the `dist/main.js`. This can be updated by changing the following two files:
+
+1. `entry` in `webpack-main.config.js`. Update the `main` property to a desired output name.
+
+```javascript
+module.exports = {
+  ...
+  entry: {
+    main: "./src/index.js"
+  },
+  ...
+};
+```
+
+2.  `url` variable in `src/webpac-dev-server.js`
+
+```javascript
+// different paths for localhost vs s3
+const url =
+  global.location.hostname === "localhost" ? "/dist/main.js" : "main.js";
+```
+
 ## External Dependencies
 
 The Remote Component is self contained with all of it's dependencies bundled with webpack. Any dependencies that will be provided by the app should be marked as `external` in the `webpack.config.js`.
