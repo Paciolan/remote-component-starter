@@ -3,16 +3,17 @@ const path = require("path");
 const webpack = require("webpack");
 const config = require("./webpack.config");
 
-const htmlPlugin = new HtmlWebpackPlugin({
-  filename: "index.html",
-  template: "src/index.html"
-});
-
 module.exports = {
   entry: "./src/webpack-dev-server.js",
   plugins: [
     ...config[0].plugins,
-    htmlPlugin,
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "src/index.html"
+    }),
+    new webpack.EnvironmentPlugin({
+      "process.env.NODE_ENV": process.env.NODE_ENV
+    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],

@@ -10,8 +10,29 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    ["@babel/plugin-transform-runtime", { "regenerator": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    ["transform-react-remove-prop-types", { "removeImport": true }]
-  ]
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "transform-react-remove-prop-types",
+      {
+        "removeImport": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "sourceMaps": true,
+      "retainLines": true
+    }
+  }
 }
