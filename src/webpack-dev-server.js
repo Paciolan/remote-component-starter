@@ -7,6 +7,11 @@ import { RemoteComponent } from "@paciolan/remote-component";
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
+import LocalComponent from "./index.js";
+
+// different paths for localhost vs s3
+const url =
+  process.env.NODE_ENV === "development" ? "/dist/main.js" : "main.js";
 
 const node = document.getElementById("app");
 
@@ -23,16 +28,15 @@ const theme = withTheme(base).extendWith({
   }
 });
 
-const Component = props => <RemoteComponent url={url} {...props} />;
+const Component = props =>
+  process.env.NODE_ENV === "development"
+    ? <LocalComponent {...props} />
+    : <RemoteComponent url={url} {...props} />; // prettier-ignore
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <Component name="Webpack" />
   </ThemeProvider>
 );
-
-// different paths for localhost vs s3
-const url =
-  global.location.hostname === "localhost" ? "/dist/main.js" : "main.js";
 
 ReactDOM.render(<App />, node);
