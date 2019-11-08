@@ -33,6 +33,10 @@
     "development": {
       "sourceMaps": true,
       "retainLines": true
+    },
+    "test": {
+      "sourceMaps": true,
+      "retainLines": true
     }
   }
 }

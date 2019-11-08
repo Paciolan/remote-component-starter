@@ -11,6 +11,28 @@
       "url": "http://localhost:9090",
       "webRoot": "${workspaceFolder}",
       "sourceMaps": true,
+    },
+    {
+      "name": "Jest", // This is the configuration name you will see in debug sidebar
+      "type": "node",
+      "request": "launch",
+      "port": 9229,
+      "address": "localhost",
+      "stopOnEntry": false,
+      "runtimeExecutable": null,
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "console": "integratedTerminal",
+      "runtimeArgs": [
+        "--inspect-brk", // node v8 use debug-brk if older version of node
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--watch",
+        "--bail",
+        "--runInBand"
+      ],
+      "cwd": "${workspaceRoot}",
+      "sourceMaps": true
     }
   ]
 }
