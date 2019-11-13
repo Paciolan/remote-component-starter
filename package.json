@@ -5,16 +5,12 @@
   "private": true,
   "browser": "dist/main.js",
   "author": "Paciolan",
-  "license": "MIT",
-  "repository": {
-    "type": "ssh",
-    "url": "git@gitlabdev.paciolan.info:development/library/javascript/remote-component-starter.git"
-  },
+  "license": "",
   "scripts": {
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production",
     "build:dev": "npm run clean && cross-env NODE_ENV=development webpack --mode development",
     "webpack-dev-server": "cross-env NODE_ENV=development webpack-dev-server -d --port 9090 --config webpack-dev-server.config.js --open",
-    "start": "concurrently -n webpack,webpack-dev-server -c green,cyan 'npm run build:dev -- --watch --verbose' 'npm run webpack-dev-server'",
+    "start": "concurrently -n webpack,webpack-dev-server -c green,cyan \"npm run build:dev -- --watch --verbose\" \"npm run webpack-dev-server\"",
     "clean": "rimraf dist",
     "cz": "git-cz",
     "test": "jest",
