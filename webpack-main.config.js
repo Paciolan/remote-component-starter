@@ -7,6 +7,12 @@
 const webpack = require("webpack");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const remoteComponentConfig = require("./remote-component.config").resolve;
+
+const externals = Object.keys(remoteComponentConfig).reduce(
+  (obj, key) => ({ ...obj, [key]: key }),
+  {}
+);
 
 module.exports = {
   plugins: [
@@ -27,9 +33,8 @@ module.exports = {
     libraryTarget: "commonjs"
   },
   externals: {
-    "prop-types": "prop-types",
-    react: "react",
-    "styled-components": "styled-components"
+    ...externals,
+    "remote-component.config.js": "remote-component.config.js"
   },
   module: {
     rules: [
