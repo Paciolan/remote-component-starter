@@ -1,6 +1,3 @@
-import styled from "styled-components";
-import { prop } from "../lib/prop";
+import React from "react";
 
-export const Title = styled.h1(props =>
-  prop(["theme", "typography", "title"], props)
-);
+export const Title = ({ children }) => <h1>{children}</h1>;
